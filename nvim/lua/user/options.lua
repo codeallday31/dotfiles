@@ -5,7 +5,7 @@ vim.opt.softtabstop = 4
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -18,6 +18,7 @@ vim.opt.mouse = 'a' -- enable mouse for all modes
 vim.opt.termguicolors = true
 
 vim.opt.spell = true
+vim.opt.spelllang = { "en_us" }
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
