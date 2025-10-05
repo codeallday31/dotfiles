@@ -7,7 +7,7 @@ return {
         require('lualine').setup({
             options = {
                 globalstatus = true,
-                theme = 'palenight',
+                theme = 'nightfly',
             },
             sections = {
                 lualine_a = {
@@ -35,7 +35,7 @@ return {
                     'filetype',
                     'encoding',
                     'fileformat',
-                    '(vim.bo.expandtab and "␠ " or "⇥ ") .. vim.bo.shiftwidth',
+                    '(vim.bo.expandtab and "⎵ " or "⇥ ") .. vim.bo.shiftwidth',
                 },
                 lualine_z = {
                     'searchcount',

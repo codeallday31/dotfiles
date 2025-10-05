@@ -10,47 +10,10 @@ return {
          'nvim-telescope/telescope-ui-select.nvim',
          { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
     },
-    -- keys = {
-    --     { '<leader>f', function() require('telescope.builtin').find_files() end },
-    --     { '<leader>F', function() require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' }) end },
-    --     { '<leader>b', function() require('telescope.builtin').buffers() end },
-    --     { '<leader>g', function() require('telescope').extensions.live_grep_args.live_grep_args({
-    --         prompt_title = 'Grep Project',
-    --         vimgrep_arguments = {
-    --             "rg",
-    --             "--hidden",
-    --             "-L",
-    --             "--color=never",
-    --             "--sort=path",
-    --             "--no-heading",
-    --             "--with-filename",
-    --             "--line-number",
-    --             "--column",
-    --             "--smart-case",
-    --         }
-    --     }) end },
-    --     { '<leader>G', function() require('telescope').extensions.live_grep_args.live_grep_args({
-    --         prompt_title = 'Grep All Files',
-    --         vimgrep_arguments = {
-    --             "rg",
-    --             "--hidden",
-    --             "--no-ignore",
-    --             "-L",
-    --             "--color=never",
-    --             "--sort=path",
-    --             "--no-heading",
-    --             "--with-filename",
-    --             "--line-number",
-    --             "--column",
-    --             "--smart-case",
-    --         },
-    --     }) end },
-    --     { '<leader>h', function() require('telescope.builtin').help_tags() end },
-    --     { '<leader>s', function() require('telescope.builtin').lsp_document_symbols() end },
-    -- },
     config = function ()
         local actions = require('telescope.actions')
         local builtin = require('telescope.builtin')
+
         require('telescope').setup({
             defaults = {
                 path_display = { truncate = 1 },
