@@ -1,8 +1,8 @@
 return {
     {
-        "nvim-treesitter/nvim-treesitter", 
-        branch = 'master', 
-        lazy = false, 
+        "nvim-treesitter/nvim-treesitter",
+        branch = 'master',
+        lazy = false,
         build = ":TSUpdate",
         dependencies = {
             'JoosepAlviste/nvim-ts-context-commentstring',
