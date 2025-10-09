@@ -1,35 +1,36 @@
 return {
-    "neovim/nvim-lspconfig",
+    'neovim/nvim-lspconfig',
     dependencies = {
-        { "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
+        { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
         {
-            "j-hui/fidget.nvim",
+            'j-hui/fidget.nvim',
             opts = {
                 notification = {
                     override_vim_notify = true,
                 },
             },
         },
-        "saghen/blink.cmp",
+        'saghen/blink.cmp',
     },
-    config = function ()
+    config = function()
         require('mason').setup({
             ui = {
                 icons = {
-                    package_installed = "✓",
-                    package_pending = "➜",
-                    package_uninstalled = "✗"
-                }
-            }
+                    package_installed = '✓',
+                    package_pending = '➜',
+                    package_uninstalled = '✗',
+                },
+            },
         })
 
         vim.lsp.enable({
             'lua-ls',
             'tailwindcss',
             'ts-ls',
+            'intelephense',
             'eslint',
-            'prettierd',
-            'intelephense'
+            'prettier',
+            'css-ls',
         })
 
         vim.diagnostic.config({
@@ -38,22 +39,21 @@ return {
             update_in_insert = false,
             severity_sort = true,
             float = {
-                border = "rounded",
+                border = 'rounded',
                 source = true,
             },
             signs = {
                 text = {
-                    [vim.diagnostic.severity.ERROR] = " ",
-                    [vim.diagnostic.severity.WARN] = " ",
-                    [vim.diagnostic.severity.INFO] = " ",
-                    [vim.diagnostic.severity.HINT] = " ",
+                    [vim.diagnostic.severity.ERROR] = ' ',
+                    [vim.diagnostic.severity.WARN] = ' ',
+                    [vim.diagnostic.severity.INFO] = ' ',
+                    [vim.diagnostic.severity.HINT] = ' ',
                 },
                 numhl = {
-                    [vim.diagnostic.severity.ERROR] = "ErrorMsg",
-                    [vim.diagnostic.severity.WARN] = "WarningMsg",
+                    [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+                    [vim.diagnostic.severity.WARN] = 'WarningMsg',
                 },
             },
         })
-    end
+    end,
 }
-

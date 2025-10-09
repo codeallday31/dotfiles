@@ -16,11 +16,10 @@ return {
         -- See :h blink-cmp-config-keymap for defining your own keymap
         keymap = {
             preset = 'default',
-                ['<CR>'] = { 'select_and_accept', 'fallback' }
+            ['<CR>'] = { 'select_and_accept', 'fallback' },
         },
-
         appearance = {
-            nerd_font_variant = 'mono'
+            nerd_font_variant = 'mono',
         },
         completion = { documentation = { auto_show = false } },
         sources = {
@@ -31,7 +30,7 @@ return {
         -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
         --
         -- See the fuzzy documentation for more information
-        fuzzy = { implementation = "prefer_rust" }
+        fuzzy = { implementation = 'prefer_rust' },
     },
-    opts_extend = { "sources.default" }
+    opts_extend = { 'sources.default' },
 }
