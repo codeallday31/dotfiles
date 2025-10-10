@@ -6,6 +6,7 @@ return {
         'typescript',
         'typescriptreact',
         'vue',
+        'astro',
     },
     root_markers = { 'tsconfig.json', 'jsconfig.json', 'package.json', '.git' },
     init_options = {

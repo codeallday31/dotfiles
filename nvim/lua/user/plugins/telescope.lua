@@ -33,6 +33,9 @@ return {
                         ['<c-down>'] = actions.cycle_history_next,
                         ['<c-up>'] = actions.cycle_history_prev,
                     },
+                    n = {
+                        ['<c-d>'] = actions.delete_buffer,
+                    },
                 },
                 file_ignore_patterns = { '.git/' },
             },
@@ -45,6 +48,7 @@ return {
                     layout_config = {
                         width = 80,
                     },
+                    initial_mode = 'normal',
                 },
                 oldfiles = {
                     prompt_title = 'History',

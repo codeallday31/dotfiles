@@ -2,7 +2,6 @@
 
 return {
     'stevearc/oil.nvim',
-    opts = {},
     dependencies = {
         {
             'nvim-tree/nvim-web-devicons',
@@ -18,6 +17,10 @@ return {
                 win_options = {
                     winblend = 0,
                 },
+            },
+            keymaps = {
+                ['<C-h>'] = false,
+                ['<C-l>'] = false,
             },
         })
 

@@ -31,6 +31,10 @@ return {
             'eslint',
             'prettier',
             'css-ls',
+            'astro-ls',
+            'twiggy_language_server',
+            'ruby_lsp',
+            'vue-ls',
         })
 
         vim.diagnostic.config({

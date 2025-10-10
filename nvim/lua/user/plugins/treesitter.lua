@@ -1,16 +1,32 @@
 return {
     {
-        "nvim-treesitter/nvim-treesitter",
+        'nvim-treesitter/nvim-treesitter',
         branch = 'master',
         lazy = false,
-        build = ":TSUpdate",
+        build = ':TSUpdate',
         dependencies = {
             'JoosepAlviste/nvim-ts-context-commentstring',
             'nvim-treesitter/nvim-treesitter-textobjects',
         },
-        config = function ()
-            require'nvim-treesitter.configs'.setup {
-                ensure_installed = { "lua", "vim", "query", "typescript", "javascript", "php", "ruby", "json", "html", "css", "xml", "yaml", "vue", "go" },
+        config = function()
+            require('nvim-treesitter.configs').setup({
+                ensure_installed = {
+                    'lua',
+                    'vim',
+                    -- 'query',
+                    'typescript',
+                    'javascript',
+                    'php',
+                    'ruby',
+                    'json',
+                    'html',
+                    'css',
+                    'xml',
+                    'yaml',
+                    'vue',
+                    -- 'go',
+                    'astro',
+                },
 
                 auto_install = true,
                 highlight = {
@@ -19,7 +35,7 @@ return {
                 },
                 indent = {
                     enable = true,
-                    disable = { "yaml" }
+                    disable = { 'yaml' },
                 },
                 rainbow = {
                     enable = true,
@@ -36,7 +52,7 @@ return {
                         },
                     },
                 },
-            }
+            })
         end,
-    }
+    },
 }

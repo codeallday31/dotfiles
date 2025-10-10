@@ -6,6 +6,8 @@ return {
     config = function()
         require('lualine').setup({
             options = {
+                component_separators = '',
+                section_separators = '',
                 globalstatus = true,
                 theme = 'nightfly',
             },
@@ -36,8 +38,8 @@ return {
                 },
                 lualine_y = {
                     'filetype',
-                    'encoding',
-                    'fileformat',
+                    -- 'encoding',
+                    -- 'fileformat',
                     '(vim.bo.expandtab and "⎵ " or "⇥ ") .. vim.bo.shiftwidth',
                 },
                 lualine_z = {

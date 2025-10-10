@@ -41,12 +41,12 @@ vim.opt.undofile = true -- persistent undo
 vim.opt.backup = true -- automatically save a backup file
 
 -- vim.opt.cmdheight = 0
-vim.opt.breakindent = true              -- maintain indent when wrapping indented lines
-vim.opt.linebreak = true                -- wrap at word boundaries
-vim.opt.mousemoveevent = true           -- Allow hovering in bufferline
+vim.opt.breakindent = true -- maintain indent when wrapping indented lines
+vim.opt.linebreak = true -- wrap at word boundaries
+vim.opt.mousemoveevent = true -- Allow hovering in bufferline
 vim.opt.shortmess:append({ I = true }) -- disable the splash screen
 --vim.opt.completeopt = 'menuone,longest,preview'
-vim.opt.signcolumn = 'yes:1'
+vim.opt.signcolumn = 'yes:2'
 --vim.opt.showmode = false
 --vim.opt.updatetime = 100   -- Decrease update time
 --vim.opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
