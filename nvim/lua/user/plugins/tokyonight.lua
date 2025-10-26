@@ -6,6 +6,7 @@ return {
     priority = 1000,
     opts = {
         style = 'night',
+        transparent = true,
         on_colors = function(colors)
             colors.gitSigns = {
                 add = colors.teal,
@@ -69,13 +70,14 @@ return {
             hl.CopilotSuggestion = {
                 fg = c.comment,
             }
+
         end,
     },
     config = function(_, opts)
         require('tokyonight').setup(opts)
 
         vim.cmd([[
-      colorscheme tokyonight
-    ]])
+          colorscheme tokyonight
+        ]])
     end,
 }

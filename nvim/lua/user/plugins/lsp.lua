@@ -1,27 +1,32 @@
 return {
     'neovim/nvim-lspconfig',
     dependencies = {
-        { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+        {
+            'williamboman/mason.nvim',
+            opts = {
+                ui = {
+                    icons = {
+                        package_installed = '✓',
+                        package_pending = '➜',
+                        package_uninstalled = '✗',
+                    },
+                }
+            },
+        },
         {
             'j-hui/fidget.nvim',
             opts = {
                 notification = {
                     override_vim_notify = true,
+                    window = {
+                        winblend = 0,
+                        align = "top"
+                    }
                 },
             },
         },
-        'saghen/blink.cmp',
     },
     config = function()
-        require('mason').setup({
-            ui = {
-                icons = {
-                    package_installed = '✓',
-                    package_pending = '➜',
-                    package_uninstalled = '✗',
-                },
-            },
-        })
 
         vim.lsp.enable({
             'lua-ls',
