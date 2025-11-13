@@ -27,19 +27,17 @@ return {
         },
     },
     config = function()
-
         vim.lsp.enable({
-            'lua-ls',
+            'lua_ls',
             'tailwindcss',
-            'ts-ls',
+            'ts_ls',
             'intelephense',
-            'eslint',
-            'prettier',
-            'css-ls',
-            'astro-ls',
+            'cssls',
+            'astro',
             'twiggy_language_server',
             'ruby_lsp',
-            'vue-ls',
+            'vue_ls',
+            'docker_language_server',
         })
 
         vim.diagnostic.config({
