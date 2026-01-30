@@ -1,8 +1,8 @@
 local api = vim.api
 
-api.nvim_create_autocmd("TextYankPost", {
+api.nvim_create_autocmd('TextYankPost', {
     callback = function()
-        vim.highlight.on_yank()
+        vim.hl.on_yank()
     end,
 })
 
@@ -20,9 +20,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
             { "n", "go",         vim.lsp.buf.type_definition, "Goto Type Definition" },
             { "n", "<leader>ca", vim.lsp.buf.code_action,     "Code Action" },
             { "n", "<leader>cr", vim.lsp.buf.rename,          "Rename Symbol" },
-            -- { "n", "<leader>q",  vim.diagnostic.setloclist,   "Diagnostics List" },
+            { "n", "<leader>gD",  vim.diagnostic.setloclist,   "Diagnostics List" },
             { "n", "gi",         ":Telescope lsp_implementations<CR>",  "Telescope LSP Implementations" },
-            { "n", "gr",         ":Telescope lsp_references<CR>",       "Telescope LSP References" }
+            { "n", "gr",         ":Telescope lsp_references<CR>",       "Telescope LSP References" },
         }
         -- stylua: ignore end
         for _, map in ipairs(keymaps) do
@@ -37,5 +37,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
         --         vim.lsp.completion.get()
         --     end)
         -- end
+    end,
+})
+
+-- Auto-lint on save/insert leave
+vim.api.nvim_create_autocmd({ 'BufWritePost', 'InsertLeave' }, {
+    callback = function()
+        require('lint').try_lint()
     end,
 })

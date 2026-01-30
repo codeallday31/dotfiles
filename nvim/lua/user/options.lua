@@ -54,3 +54,5 @@ vim.opt.signcolumn = 'yes:2'
 --vim.opt.titlestring = '%f // nvim'
 --vim.opt.inccommand = 'split'
 vim.opt.backupdir:remove('.') -- keep backups out of the current directory
+
+vim.g.lazyvim_eslint_auto_format = true

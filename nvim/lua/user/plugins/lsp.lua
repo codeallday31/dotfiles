@@ -10,7 +10,7 @@ return {
                         package_pending = '➜',
                         package_uninstalled = '✗',
                     },
-                }
+                },
             },
         },
         {
@@ -20,8 +20,8 @@ return {
                     override_vim_notify = true,
                     window = {
                         winblend = 0,
-                        align = "top"
-                    }
+                        align = 'top',
+                    },
                 },
             },
         },
@@ -38,6 +38,7 @@ return {
             'ruby_lsp',
             'vue_ls',
             'docker_language_server',
+            'emmet_language_server',
         })
 
         vim.diagnostic.config({

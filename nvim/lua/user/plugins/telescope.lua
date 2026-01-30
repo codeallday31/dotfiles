@@ -32,6 +32,8 @@ return {
                         ['<esc>'] = actions.close,
                         ['<c-down>'] = actions.cycle_history_next,
                         ['<c-up>'] = actions.cycle_history_prev,
+                        ['<c-h>'] = actions.select_horizontal,
+                        ['<c-j>'] = actions.select_vertical,
                     },
                     n = {
                         ['<c-d>'] = actions.delete_buffer,

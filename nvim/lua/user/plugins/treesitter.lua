@@ -24,6 +24,7 @@ return {
                     'xml',
                     'yaml',
                     'vue',
+                    'twig',
                     -- 'go',
                     'astro',
                 },
