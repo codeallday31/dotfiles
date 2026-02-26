@@ -1,0 +1,10 @@
+customCommands:
+  - key: 'E'
+    description: 'Add empty commit'
+    context: 'commits'
+    command: 'git commit --allow-empty -m "{{index .PromptResponses 0}}"'
+    loadingText: 'Committing empty commit...'
+    prompts:
+      - type: 'input'
+        title: 'Commit message'
+        initialValue: ''
