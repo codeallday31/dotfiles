@@ -33,10 +33,11 @@ link_path() {
 }
 
 LINK_PAIRS=(
-    "$DOTFILES/nvim"            "$HOME/.config/nvim"
-    "$DOTFILES/lazygit"         "$HOME/.config/lazygit"
-    "$DOTFILES/tmux/tmux.conf"  "$HOME/.tmux.conf"
-    "$DOTFILES/scripts/t"       "$HOME/.local/bin/t"
+    "$DOTFILES/nvim"                    "$HOME/.config/nvim"
+    "$DOTFILES/lazygit"                 "$HOME/.config/lazygit"
+    "$DOTFILES/starship/starship.toml"  "$HOME/.config/starship.toml"
+    "$DOTFILES/tmux/tmux.conf"          "$HOME/.tmux.conf"
+    "$DOTFILES/scripts/t"               "$HOME/.local/bin/t"
 )
 
 for ((i = 0; i < ${#LINK_PAIRS[@]}; i += 2)); do
